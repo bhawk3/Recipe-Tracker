@@ -1,8 +1,8 @@
-/<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <title>PageTitle</title>
+    <title>The Recipe Archive</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,48 +20,49 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">App Name</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Demo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
+            
+            <div class="sidenav">
+                <a class="navbar-light" href="#">The Recipe Archive</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
+
     <!-- ======= Hero Section ======= -->
     <main id="hero">
         <div class="container col-xxl-8 px-4 py-5">
+            <!-- A button to open the popup form -->
+            <button class="open-button" onclick="openForm()">Add Recipe</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h3>Add New Recipe</h3>
+
+    <label for="Recipe Name"><b>Recipe Name</b></label>
+    <input type="text" placeholder="Enter the recipe name" name="name" required>
+    <label for="Ingredient1"><b>Ingredient 1</b></label>
+    <input type="text" placeholder="First ingredient" name="Ingredient1" required>
+    <label for="Ingredient2"><b>Ingredient 2</b></label>
+    <input type="text" placeholder="Second ingredient" name="Ingredient2" required>
+    <label for="Ingredient3"><b>Ingredient 3</b></label>
+    <input type="text" placeholder="Third ingredient" name="Ingredient3" required>
+
+
+
+    <button type="submit" class="btn">Add</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="https://www.dropbox.com/s/25lk5ur2qvxms7o/AppLandingPage.png?raw=1"
-                        class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
-                        loading="lazy">
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Ship great software with our bug tracker</h1>
-                    <p class="lead">A simple, fast and scalable bug tracking system that helps you manage bugs easily
-                        and deliver great products on time.
-                    </p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Demo</button>
-                        <button type="button" class="btn btn-outline-primary btn-lg px-4">About</button>
-                    </div>
-                </div>
+                <div class="col" id="recipe-col-1">Recipe 1</div>
+                <div class="col" id="recipe-col-2">Recipe 2</div>
+                <div class="col" id="recipe-col-3">Recipe 3</div>
+
             </div>
         </div>
     </main>
